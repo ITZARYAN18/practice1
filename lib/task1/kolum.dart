@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/task1/gridwa.dart';
 
 class ColumnTrial extends StatelessWidget {
   const ColumnTrial({super.key});
@@ -31,7 +32,9 @@ class ColumnTrial extends StatelessWidget {
           ),
           SizedBox(height: 40,),
           Container(
-            child: ElevatedButton(onPressed: (){}, child: Text("Get Started")),
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> GridTrial()));
+            }, child: Text("Get Started")),
           )
 
         ],

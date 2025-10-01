@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/task1/gridwa.dart';
 import 'package:notes_app/task1/kolum.dart';
+import 'package:notes_app/tut1/home.dart';
+import 'package:notes_app/tut1/provide.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
-      home: ColumnTrial(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context)=> Provide()),
+      ],
+      child: MaterialApp(
+        home: Home(),
+      ),
     );
   }
 

@@ -16,7 +16,7 @@ class CartPage extends StatelessWidget {
       body: Container(
         child: ElevatedButton(
           onPressed: () {
-            Provider.of<CartProvider>(context, listen: false).addToCart(Product);
+            // Provider.of<CartProvider>(context, listen: false).addToCart(products);
           },
           child: Text("Add to Cart"),
         )
